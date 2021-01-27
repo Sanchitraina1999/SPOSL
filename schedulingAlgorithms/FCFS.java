@@ -1,47 +1,70 @@
-import java.util.Arrays;
-import java.util.Scanner;
 
-public class FCFS {
-
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        // --------FCFS
-        System.out.println("Enter Number of Processes:");
-        int numProcess = sc.nextInt();
-        Process[] process = new Process[numProcess];
-
-        // Accept Input
-        for (int i = 1; i < numProcess+1; i++) {
-            System.out.println("Enter Arrival time & Burst time for Process P(" + i + "):");
-            int at = sc.nextInt();
-            int bt = sc.nextInt();
-            process[i-1] = new Process("P" + i, bt, at);
-        }
-
-        // Sorting processes according to Arrival Time //No need if you take AT=0 or in
-        // ascending order
-        Arrays.sort(process, new SortByArrival());
-
-        int sum = 0;
-        double avgWT = 0, avgTAT = 0;
-        System.out.println("\n\nPRNo\tBT\tAT\tCT\tTAT\tWT");
-        System.out.println("==================================================");
-        for (int i = 0; i < numProcess; i++) {
-            sum = process[i].CT = sum + process[i].BT;
-            process[i].TAT = process[i].CT - process[i].AT;
-            process[i].WT = process[i].TAT - process[i].BT;
-
-            avgWT = avgWT + process[i].WT;
-            avgTAT = avgTAT + process[i].TAT;
-
-            process[i].display();
-        }
-        avgTAT = (double) avgTAT / numProcess;
-        avgWT = (double) avgWT / numProcess;
-        System.out.println("Average Waiting Time" + avgWT);
-        System.out.println("Average TAT=" + avgTAT);
-    }
-
-}
+import java.text.ParseException; 
+  
+class FCFS { 
+    static void findWaitingTime(int processes[], int n, 
+            int bt[], int wt[]) { 
+        // waiting time for first process is 0  
+        wt[0] = 0; 
+  
+        // calculating waiting time  
+        for (int i = 1; i < n; i++) { 
+            wt[i] = bt[i - 1] + wt[i - 1]; 
+        } 
+    } 
+  
+    // Function to calculate turn around time  
+    static void findTurnAroundTime(int processes[], int n, 
+            int bt[], int wt[], int tat[]) { 
+        // calculating turnaround time by adding  
+        // bt[i] + wt[i]  
+        for (int i = 0; i < n; i++) { 
+            tat[i] = bt[i] + wt[i]; 
+        } 
+    } 
+  
+    //Function to calculate average time  
+    static void findavgTime(int processes[], int n, int bt[]) { 
+        int wt[] = new int[n], tat[] = new int[n]; 
+        int total_wt = 0, total_tat = 0; 
+  
+        //Function to find waiting time of all processes  
+        findWaitingTime(processes, n, bt, wt); 
+  
+        //Function to find turn around time for all processes  
+        findTurnAroundTime(processes, n, bt, wt, tat); 
+  
+        //Display processes along with all details  
+        System.out.printf("Processes Burst time Waiting"
+                       +" time Turn around time\n"); 
+  
+        // Calculate total waiting time and total turn  
+        // around time  
+        for (int i = 0; i < n; i++) { 
+            total_wt = total_wt + wt[i]; 
+            total_tat = total_tat + tat[i]; 
+            System.out.printf(" %d ", (i + 1)); 
+            System.out.printf("     %d ", bt[i]); 
+            System.out.printf("     %d", wt[i]); 
+            System.out.printf("     %d\n", tat[i]); 
+        } 
+        float s = (float)total_wt /(float) n; 
+        int t = total_tat / n; 
+        System.out.printf("Average waiting time = %f", s); 
+        System.out.printf("\n"); 
+        System.out.printf("Average turn around time = %d ", t); 
+    } 
+  
+    // Driver code  
+    public static void main(String[] args) throws ParseException { 
+        //process id's  
+        int processes[] = {1, 2, 3}; 
+        int n = processes.length; 
+  
+        //Burst time of all processes  
+        int burst_time[] = {10, 5, 8}; 
+  
+        findavgTime(processes, n, burst_time); 
+  
+    } 
+} 
