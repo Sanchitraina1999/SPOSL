@@ -1,4 +1,3 @@
-
 import java.text.ParseException; 
   
 class FCFS { 
@@ -6,35 +5,21 @@ class FCFS {
             int bt[], int wt[]) { 
         // waiting time for first process is 0  
         wt[0] = 0; 
-  
-        // calculating waiting time  
         for (int i = 1; i < n; i++) { 
             wt[i] = bt[i - 1] + wt[i - 1]; 
         } 
     } 
-  
-    // Function to calculate turn around time  
     static void findTurnAroundTime(int processes[], int n, 
             int bt[], int wt[], int tat[]) { 
-        // calculating turnaround time by adding  
-        // bt[i] + wt[i]  
         for (int i = 0; i < n; i++) { 
             tat[i] = bt[i] + wt[i]; 
         } 
     } 
-  
-    //Function to calculate average time  
     static void findavgTime(int processes[], int n, int bt[]) { 
         int wt[] = new int[n], tat[] = new int[n]; 
         int total_wt = 0, total_tat = 0; 
-  
-        //Function to find waiting time of all processes  
         findWaitingTime(processes, n, bt, wt); 
-  
-        //Function to find turn around time for all processes  
         findTurnAroundTime(processes, n, bt, wt, tat); 
-  
-        //Display processes along with all details  
         System.out.printf("Processes Burst time Waiting"
                        +" time Turn around time\n"); 
   
@@ -60,8 +45,6 @@ class FCFS {
         //process id's  
         int processes[] = {1, 2, 3}; 
         int n = processes.length; 
-  
-        //Burst time of all processes  
         int burst_time[] = {10, 5, 8}; 
   
         findavgTime(processes, n, burst_time); 
