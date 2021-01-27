@@ -30,6 +30,7 @@ public class c1 {
 		for (int i = 0; i < n; i++) {
 			for (int j = 1; j < n; j++) {
 				if (obj[j - 1].arrivalTime > obj[j].arrivalTime) {
+					//swap
 					pr temp = new pr();
 					temp = obj[j - 1];
 					obj[j - 1] = obj[j];
