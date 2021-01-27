@@ -77,7 +77,7 @@ public class c1 {
 		for(int i=0;i<=obj[n-1].arrivalTime+totalBurstTime;i++){
 			selected=-1;minval=100000000;
 			for(int j=0;j<n;j++){
-				if(obj1[j].burstTime<=minval&&i>=obj1[j].arrivalTime&&obj1[j].burstTime>=1){
+				if(obj1[j].burstTime<=minval && i>=obj1[j].arrivalTime&&obj1[j].burstTime>=1){
 					minval=obj1[j].burstTime;
 					selected=j;
 				}
