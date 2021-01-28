@@ -20,7 +20,7 @@ public class FCFS {
 
         // Sorting processes according to Arrival Time //No need if you take AT=0 or in
         // ascending order
-        Arrays.sort(process, new so);
+        Arrays.sort(process, new SortByArrival());
 
         int sum = 0;
         double avgWT = 0, avgTAT = 0;
