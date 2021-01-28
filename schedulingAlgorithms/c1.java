@@ -5,7 +5,7 @@ class pr {
 	String name;
 }
 
-public class c1 {
+public class SJF {
 	static int ch, n;
 	static pr obj[] = new pr[100];
 	static Scanner sc = new Scanner(System.in);
