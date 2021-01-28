@@ -9,9 +9,9 @@ class pr {
 public class c1 {
 	static int ch, n;
 	static pr obj[] = new pr[100];
+	static Scanner sc = new Scanner(System.in);
 
 	public static void processInput() {
-		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter no of processes: \n");
 		n = sc.nextInt();
 		for (int i = 0; i < n; i++) {
@@ -19,7 +19,7 @@ public class c1 {
 			obj[i] = new pr();
 			obj[i].arrivalTime = sc.nextInt();
 			obj[i].burstTime = sc.nextInt();
-			int x=i+1;
+			int x = i + 1;
 			obj[i].name = "p" + x;
 			obj[i].id = i;
 		}
@@ -30,7 +30,7 @@ public class c1 {
 		for (int i = 0; i < n; i++) {
 			for (int j = 1; j < n; j++) {
 				if (obj[j - 1].arrivalTime > obj[j].arrivalTime) {
-					//swap
+					// swap
 					pr temp = new pr();
 					temp = obj[j - 1];
 					obj[j - 1] = obj[j];
@@ -42,8 +42,10 @@ public class c1 {
 
 	public static void display() {
 		for (int i = 0; i < n; i++) {
-			System.out.println("Process name: " + obj[i].name + "\t" + "Waiting Time: " + obj[i].waitingTime + "\t"+ "Turnaround Time: " + obj[i].turnaroundTime);
+			System.out.println("Process name: " + obj[i].name + "\t" + "Waiting Time: " + obj[i].waitingTime + "\t"
+					+ "Turnaround Time: " + obj[i].turnaroundTime);
 		}
+		System.out.println("\n");
 	}
 
 	public static void fcfs() {
@@ -62,31 +64,33 @@ public class c1 {
 		}
 	}
 
-	public static void sjf(){
+	public static void sjf() {
 		System.out.println("\n\nSJF\n\n");
 		prsort();
-		pr obj1[]=new pr[100];
-		for(int i=0;i<n;i++){
-			obj1[i]=new pr();
-			obj1[i].arrivalTime=obj[i].arrivalTime;
-			obj1[i].burstTime=obj[i].burstTime;
+		pr obj1[] = new pr[100];
+		for (int i = 0; i < n; i++) {
+			obj1[i] = new pr();
+			obj1[i].arrivalTime = obj[i].arrivalTime;
+			obj1[i].burstTime = obj[i].burstTime;
 		}
-		int totalBurstTime=0,selected,minval=1;
-		for(int i=0;i<n;i++)
-			totalBurstTime+=obj[i].burstTime;
-		for(int i=0;i<=obj[n-1].arrivalTime+totalBurstTime;i++){
-			selected=-1;minval=100000000;
-			for(int j=0;j<n;j++){
-				if(obj1[j].burstTime<=minval && i>=obj1[j].arrivalTime&&obj1[j].burstTime>=1){
-					minval=obj1[j].burstTime;
-					selected=j;
+		int totalBurstTime = 0, selected, minval = 1;
+		for (int i = 0; i < n; i++)
+			totalBurstTime += obj[i].burstTime;
+		for (int i = 0; i <= obj[n - 1].arrivalTime + totalBurstTime; i++) {
+			selected = -1;
+			minval = 100000000;
+			for (int j = 0; j < n; j++) {
+				if (obj1[j].burstTime <= minval && i >= obj1[j].arrivalTime && obj1[j].burstTime >= 1) {
+					minval = obj1[j].burstTime;
+					selected = j;
 				}
 			}
-			if(selected!=-1){
+			if (selected != -1) {
 				obj1[selected].burstTime--;
-				if(obj1[selected].burstTime==0){
-					obj[selected].waitingTime=Math.max(i-(obj[selected].burstTime+obj[selected].arrivalTime)+1,0);
-					obj[selected].turnaroundTime=obj[selected].waitingTime+obj[selected].burstTime;
+				if (obj1[selected].burstTime == 0) {
+					obj[selected].waitingTime = Math.max(i - (obj[selected].burstTime + obj[selected].arrivalTime) + 1,
+							0);
+					obj[selected].turnaroundTime = obj[selected].waitingTime + obj[selected].burstTime;
 				}
 			}
 		}
@@ -94,9 +98,17 @@ public class c1 {
 
 	public static void main(String[] Args) {
 		processInput();
-		fcfs();
-		display();
-		sjf();
-		display();
+		int x = 1;
+		do {
+			System.out.println("Enter choice:\n 1. FCFS\n 2. SJF\n 3.Exit");
+			x = sc.nextInt();
+			if (x == 1) {
+				fcfs();
+				display();
+			} else if (x == 2) {
+				sjf();
+				display();
+			}
+		} while (x >= 1 && x <= 2);
 	}
 }
