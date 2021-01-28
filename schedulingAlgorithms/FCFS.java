@@ -5,7 +5,6 @@ public class FCFS {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        
         System.out.println("Enter Number of Processes:");
         int numProcess = sc.nextInt();
         Process[] process = new Process[numProcess];
@@ -37,6 +36,6 @@ public class FCFS {
         avgWT = (double) avgWT / numProcess;
         System.out.println("Average Waiting Time = " + avgWT);
         System.out.println("Average TAT = " + avgTAT);
-        
+
     }
 }
