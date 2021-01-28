@@ -32,22 +32,9 @@ public void display()
 //Class for sorting Processes
 class SortByArrival implements Comparator<Process>
 {
-
 	@Override
 	public int compare(Process p1, Process p2) {
 		
 		return p1.AT-p2.AT;
 	}
-	
-}
-
-class SortByPriority implements Comparator<Process>
-{
-
-	@Override
-	public int compare(Process o1, Process o2) {
-		
-		return o1.priority-o2.priority;
-	}
-	
 }
