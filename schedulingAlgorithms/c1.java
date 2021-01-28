@@ -2,7 +2,6 @@ import java.util.*;
 
 class pr {
 	int arrivalTime, burstTime, id, waitingTime, turnaroundTime;
-	boolean flag = false;
 	String name;
 }
 
