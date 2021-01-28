@@ -97,18 +97,8 @@ public class c1 {
 
 	public static void main(String[] Args) {
 		processInput();
-		int x = 1;
-		do {
-			System.out.println("Enter choice:\n 1. FCFS\n 2. SJF\n 3.Exit");
-			x = sc.nextInt();
-			if (x == 1) {
-				fcfs();
-				display();
-			} else if (x == 2) {
-				sjf();
-				display();
-			}
-		} while (x >= 1 && x <= 2);
+		sjf();
+		display();
 		sc.close();
 	}
 }
