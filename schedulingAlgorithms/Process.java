@@ -25,13 +25,16 @@ public class Process {
 	}
 
 	public void display() {
+		System.out.println("\n\nPRNo\tBT\tAT\tCT\tTAT\tWT");
+		System.out.println("==================================================");
 		System.out.println(name + "\t" + BT + "\t" + AT + "\t" + CT + "\t" + TAT + "\t" + WT + "\t" + priority);
 	}
 }
 
 // Class for sorting Processes
-class SortByArrival implements Comparator<Process>{
-	public int compare(Process p1, Process p2){
+class SortByArrival implements Comparator<Process> {
+	@Override
+	public int compare(Process p1, Process p2) {
 		return p1.AT - p2.AT;
 	}
 }

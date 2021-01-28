@@ -24,8 +24,6 @@ public class FCFS {
 
         int sum = 0;
         double avgWT = 0, avgTAT = 0;
-        System.out.println("\n\nPRNo\tBT\tAT\tCT\tTAT\tWT");
-        System.out.println("==================================================");
         for (int i = 0; i < numProcess; i++) {
             sum = process[i].CT = sum + process[i].BT;
             process[i].TAT = process[i].CT - process[i].AT;
