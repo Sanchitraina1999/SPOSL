@@ -20,7 +20,7 @@ public class c1 {
 			obj[i].arrivalTime = sc.nextInt();
 			obj[i].burstTime = sc.nextInt();
 			int x = i + 1;
-			obj[i].name = "p" + x;
+			obj[i].name = "P" + x;
 			obj[i].id = i;
 		}
 	}
