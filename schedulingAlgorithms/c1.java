@@ -109,5 +109,6 @@ public class c1 {
 				display();
 			}
 		} while (x >= 1 && x <= 2);
+		sc.close();
 	}
 }
