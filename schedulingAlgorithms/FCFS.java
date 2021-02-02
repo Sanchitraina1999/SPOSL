@@ -39,6 +39,6 @@ public class FCFS {
         avgWT = (double) avgWT / numProcess;
         System.out.println("Average Waiting Time = " + avgWT);
         System.out.println("Average TAT = " + avgTAT);
-
+        sc.close();
     }
 }
