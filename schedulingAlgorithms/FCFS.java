@@ -9,18 +9,21 @@ public class FCFS {
         int numProcess = sc.nextInt();
         Process[] process = new Process[numProcess];
 
-        
-        for (int i = 1; i < numProcess+1; i++) {
+        for (int i = 1; i < numProcess + 1; i++) {
             System.out.println("Enter Arrival time & Burst time for Process P(" + i + "):");
             int at = sc.nextInt();
             int bt = sc.nextInt();
-            process[i-1] = new Process("P" + i, bt, at);
+            process[i - 1] = new Process("P" + i, bt, at);
         }
 
         Arrays.sort(process, new SortByArrival());
 
         int sum = 0;
+
         double avgWT = 0, avgTAT = 0;
+
+        System.out.println("\n\nPRNo\tBT\tAT\tCT\tTAT\tWT");
+        System.out.println("==================================================");
         for (int i = 0; i < numProcess; i++) {
             sum = process[i].CT = sum + process[i].BT;
             process[i].TAT = process[i].CT - process[i].AT;

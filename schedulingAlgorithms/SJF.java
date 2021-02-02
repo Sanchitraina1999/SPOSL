@@ -47,22 +47,6 @@ public class SJF {
 		System.out.println("\n");
 	}
 
-	public static void fcfs() {
-		System.out.println("\n\nFCFS\n\n");
-		prsort();
-		int t = 0;
-		for (int i = 0; i < n; i++) {
-			if (obj[i].arrivalTime <= t) {
-				obj[i].waitingTime = t - obj[i].arrivalTime;
-				t += obj[i].burstTime;
-			} else {
-				obj[i].waitingTime = 0;
-				t += obj[i].arrivalTime - t + obj[i].burstTime;
-			}
-			obj[i].turnaroundTime = obj[i].waitingTime + obj[i].burstTime;
-		}
-	}
-
 	public static void sjf() {
 		System.out.println("\n\nSJF\n\n");
 		prsort();

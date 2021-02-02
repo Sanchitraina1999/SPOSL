@@ -25,8 +25,6 @@ public class Process {
 	}
 
 	public void display() {
-		System.out.println("\n\nPRNo\tBT\tAT\tCT\tTAT\tWT");
-		System.out.println("==================================================");
 		System.out.println(name + "\t" + BT + "\t" + AT + "\t" + CT + "\t" + TAT + "\t" + WT + "\t" + priority);
 	}
 }
