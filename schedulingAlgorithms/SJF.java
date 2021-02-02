@@ -40,10 +40,17 @@ public class SJF {
 	}
 
 	public static void display() {
+		double avgwt = 0.0, avgTAT = 0.0;
 		for (int i = 0; i < n; i++) {
 			System.out.println("Process name: " + obj[i].name + "\t" + "Waiting Time: " + obj[i].waitingTime + "\t"
 					+ "Turnaround Time: " + obj[i].turnaroundTime);
+			avgwt += obj[i].waitingTime;
+			avgTAT += obj[i].turnaroundTime;
 		}
+		avgwt /= n;
+		avgTAT /= n;
+		System.out.println("Avgwt = " + avgwt + "\n");
+		System.out.println("AvgTAT = " + avgTAT + "\n");
 		System.out.println("\n");
 	}
 
