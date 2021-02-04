@@ -36,7 +36,7 @@ class SortByArrival implements Comparator<Process> {
 	}
 }
 
-class SortByArrival implements Comparator<Process> {
+class SortByPriority implements Comparator<Process> {
 	public int compare(Process p1, Process p2) {
 		return p1.AT - p2.AT;
 	}
