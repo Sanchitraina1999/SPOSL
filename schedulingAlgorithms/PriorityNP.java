@@ -51,37 +51,37 @@ public class PriorityNP {
 			
 		int i, j;
 		System.out.print(" ");
-		for (i = 0; i < n; i++) {
-			for (j = 0; j < obj[i].burstTime; j++)
+		for (i = 0; i < numProcess; i++) {
+			for (j = 0; j < process[i].BT; j++)
 				System.out.print("--");
 			System.out.print(" ");
 		}
 		System.out.print("\n|");
 
-		for (i = 0; i < n; i++) {
-			for (j = 0; j < obj[i].burstTime - 1; j++)
+		for (i = 0; i < numProcess; i++) {
+			for (j = 0; j < process[i].burstTime - 1; j++)
 				System.out.print(" ");
 			int x = i + 1;
 			System.out.print("P(" + x + ")");
-			for (j = 0; j < obj[i].burstTime - 1; j++)
+			for (j = 0; j < process[i].burstTime - 1; j++)
 				System.out.print(" ");
 			System.out.print("|");
 		}
 		System.out.print("\n ");
-		for (i = 0; i < n; i++) {
-			for (j = 0; j < obj[i].burstTime; j++)
+		for (i = 0; i < numProcess; i++) {
+			for (j = 0; j < process[i].BT; j++)
 				System.out.print("--");
 			System.out.print(" ");
 		}
 		System.out.print("\n");
 
 		System.out.print("0");
-		for (i = 0; i < n; i++) {
-			for (j = 0; j < obj[i].burstTime; j++)
+		for (i = 0; i < numProcess; i++) {
+			for (j = 0; j < process[i].BT; j++)
 				System.out.print("  ");
-			if (obj[i].turnaroundTime > 9)
+			if (process[i].turnaroundTime > 9)
 				System.out.print("\b");
-			System.out.print(obj[i].turnaroundTime);
+			System.out.print(process[i].turnaroundTime);
 
 		}
 		System.out.print("\n");
