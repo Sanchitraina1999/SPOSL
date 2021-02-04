@@ -25,7 +25,6 @@ public class SJF {
 	}
 
 	public static void prsort() {
-		// Arrays.sort(obj);
 		for (int i = 0; i < n; i++) {
 			for (int j = 1; j < n; j++) {
 				if (obj[j - 1].arrivalTime > obj[j].arrivalTime) {
@@ -49,8 +48,8 @@ public class SJF {
 		}
 		avgwt /= n;
 		avgTAT /= n;
-		System.out.println("Avgwt = " + avgwt + "\n");
-		System.out.println("AvgTAT = " + avgTAT + "\n");
+		System.out.println("Avgwt = " + avgwt);
+		System.out.println("AvgTAT = " + avgTAT);
 		System.out.println("\n");
 	}
 
@@ -86,10 +85,65 @@ public class SJF {
 		}
 	}
 
+	public static void gannt_chart() {
+		int i, j;
+        System.out.print(" ");
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < obj[i].burstTime; j++)
+                System.out.print("--");
+            System.out.print(" ");
+        }
+        System.out.print("\n|");
+
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < obj[i].burstTime - 1; j++)
+                System.out.print(" ");
+            int x = i + 1;
+            System.out.print("P(" + x + ")");
+            for (j = 0; j < obj[i].burstTime - 1; j++)
+                System.out.print(" ");
+            System.out.print("|");
+        }
+        System.out.print("\n ");
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < obj[i].burstTime; j++)
+                System.out.print("--");
+            System.out.print(" ");
+        }
+        System.out.print("\n");
+
+        System.out.print("0");
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < obj[i].burstTime; j++)
+                System.out.print("  ");
+            if (obj[i].turnaroundTime > 9)
+                System.out.print("\b");
+            System.out.print(obj[i].turnaroundTime);
+
+        }
+        System.out.print("\n");
+	}
+
 	public static void main(String[] Args) {
 		processInput();
 		sjf();
 		display();
+		gannt_chart();
 		sc.close();
 	}
 }
+
+/*
+	Enter no of processes: 
+	5
+	Enter processes arrival time, burst time: 
+	2 6
+	Enter processes arrival time, burst time: 
+	5 2
+	Enter processes arrival time, burst time: 
+	1 8
+	Enter processes arrival time, burst time: 
+	0 3
+	Enter processes arrival time, burst time: 
+	4 4
+*/

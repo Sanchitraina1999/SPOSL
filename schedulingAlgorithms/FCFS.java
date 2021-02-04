@@ -39,6 +39,44 @@ public class FCFS {
         avgWT = (double) avgWT / numProcess;
         System.out.println("Average Waiting Time = " + avgWT);
         System.out.println("Average TAT = " + avgTAT);
+
+        int i, j;
+        System.out.print(" ");
+        for (i = 0; i < numProcess; i++) {
+            for (j = 0; j < process[i].BT; j++)
+                System.out.print("--");
+            System.out.print(" ");
+        }
+        System.out.print("\n|");
+
+        for (i = 0; i < numProcess; i++) {
+            for (j = 0; j < process[i].BT - 1; j++)
+                System.out.print(" ");
+            int x = i + 1;
+            System.out.print("P(" + x + ")");
+            for (j = 0; j < process[i].BT - 1; j++)
+                System.out.print(" ");
+            System.out.print("|");
+        }
+        System.out.print("\n ");
+        for (i = 0; i < numProcess; i++) {
+            for (j = 0; j < process[i].BT; j++)
+                System.out.print("--");
+            System.out.print(" ");
+        }
+        System.out.print("\n");
+
+        System.out.print("0");
+        for (i = 0; i < numProcess; i++) {
+            for (j = 0; j < process[i].BT; j++)
+                System.out.print("  ");
+            if (process[i].TAT > 9)
+                System.out.print("\b");
+            System.out.print(process[i].TAT);
+
+        }
+        System.out.print("\n");
+
         sc.close();
     }
 }
