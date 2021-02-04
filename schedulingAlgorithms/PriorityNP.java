@@ -7,8 +7,7 @@ public class PriorityNP {
 	public void  execute()
 	{
 		sc = new Scanner(System.in);
-
-		//--------FCFS
+		
 		System.out.println("Enter Number of Processes:");
 		int numProcess=sc.nextInt();
 		Process []process=new Process[numProcess];
