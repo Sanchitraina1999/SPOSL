@@ -17,7 +17,7 @@ public class RoundRobin {
             int bt = sc.nextInt();
             process[i] = new Process("P" + (i + 1), bt, at);
         }
-        Arrays.sort(process, new SortByArrival()); // sort according to arrival time
+        Arrays.sort(process, new SortByArrival());
 
         System.out.println("Enter Quantum Time: ");
         int quantum = sc.nextInt();
@@ -54,15 +54,9 @@ public class RoundRobin {
                         process[i].display();
                     }
                 }
-                /*
-                 * else //no process is arrived currently { time++;
-                 * 
-                 * }
-                 */
 
             }
-            if (done == true) // done executing all processes
-            {
+            if (done == true) {
                 break;
             }
 
