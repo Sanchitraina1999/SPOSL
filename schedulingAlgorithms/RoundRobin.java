@@ -34,7 +34,7 @@ public class RoundRobin {
                     done = false;
 
                     if (process[i].remBT > quantum) // Ajun time remaining aahe :v
-                    {
+                    {                    if (process[i].remBT > quantum) 
                         time = time + quantum;
                         process[i].remBT = process[i].remBT - quantum;
                         System.out.println(i + " TIME " + time);
