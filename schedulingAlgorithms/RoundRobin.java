@@ -33,18 +33,17 @@ public class RoundRobin {
                 if (process[i].remBT > 0 && process[i].AT <= time) {
                     done = false;
 
-                    if (process[i].remBT > quantum) // Ajun time remaining aahe :v
-                    {                    if (process[i].remBT > quantum) 
+                    if (process[i].remBT > quantum)
+                    {
                         time = time + quantum;
                         process[i].remBT = process[i].remBT - quantum;
                         System.out.println(i + " TIME " + time);
 
-                    } else // process will finish execution
-                    {
+                    } 
+                    else{
 
                         time += process[i].remBT;
                         System.out.println(i + " TIME " + time);
-
                         process[i].remBT = 0;
                         process[i].CT = time;
                         process[i].TAT = process[i].CT - process[i].AT;
