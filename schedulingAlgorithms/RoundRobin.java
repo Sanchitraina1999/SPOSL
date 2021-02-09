@@ -2,10 +2,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class RoundRobin {
-    private Scanner sc;
-
-    public void execute() {
-        sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter Number of Processes:");
         int numProcess = sc.nextInt();
