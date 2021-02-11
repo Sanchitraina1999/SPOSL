@@ -83,32 +83,34 @@ public class FCFS {
 }
 
 /*
-    imsotired@imsotired-Vostro-3578:~/Desktop/TE/SPOSL$  /usr/bin/env /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Dfile.encoding=UTF-8 -cp /home/imsotired/.config/Code/User/workspaceStorage/557c4fc057c4787074b405cb8c60a66e/redhat.java/jdt_ws/SPOSL_ad48c254/bin FCFS 
-Enter Number of Processes:
-5
-Enter Arrival time & Burst time for Process P(1):
-2 6
-Enter Arrival time & Burst time for Process P(2):
-5 3
-Enter Arrival time & Burst time for Process P(3):
-1 8
-Enter Arrival time & Burst time for Process P(4):
-0 3
-Enter Arrival time & Burst time for Process P(5):
-4 4 
+    imsotired@imsotired-Vostro-3578:~/Desktop/TE/SPOSL$  /usr/bin/env /usr/lib/jvm/java-11-openjdk-amd64/bin/java 
+    -Dfile.encoding=UTF-8 -cp /home/imsotired/.config/Code/User/workspaceStorage/557c4fc057c4787074b405cb8c60a66e/redhat.java/jdt_ws/SPOSL_ad48c254/bin FCFS 
+    
+    Enter Number of Processes:
+    5
+    Enter Arrival time & Burst time for Process P(1):
+    2 6
+    Enter Arrival time & Burst time for Process P(2):
+    5 3
+    Enter Arrival time & Burst time for Process P(3):
+    1 8
+    Enter Arrival time & Burst time for Process P(4):
+    0 3
+    Enter Arrival time & Burst time for Process P(5):
+    4 4 
 
 
-PRNo    BT      AT      CT      TAT     WT
-==================================================
-P4      3       0       3       3       0       0
-P3      8       1       11      10      2       0
-P1      6       2       17      15      9       0
-P5      4       4       21      17      13      0
-P2      3       5       24      19      16      0
-Average Waiting Time = 8.0
-Average TAT = 12.8
- ------ ---------------- ------------ -------- ------ 
-|  P(1)  |       P(2)       |     P(3)     |   P(4)   |  P(5)  |
- ------ ---------------- ------------ -------- ------ 
-0      3               10           15       17     19
+    PRNo    BT      AT      CT      TAT     WT
+    ==================================================
+    P4      3       0       3       3       0       0
+    P3      8       1       11      10      2       0
+    P1      6       2       17      15      9       0
+    P5      4       4       21      17      13      0
+    P2      3       5       24      19      16      0
+    Average Waiting Time = 8.0
+    Average TAT = 12.8
+    ------ ---------------- ------------ -------- ------ 
+    |  P(1)  |       P(2)       |     P(3)     |   P(4)   |  P(5)  |
+    ------ ---------------- ------------ -------- ------ 
+    0      3               10           15       17     19
 */
