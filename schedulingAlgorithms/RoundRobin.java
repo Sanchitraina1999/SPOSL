@@ -61,7 +61,7 @@ public class RoundRobin {
         int i, j;
         System.out.print(" ");
         for (i = 0; i < numProcess; i++) {
-            for (j = 0; j < process[i].burstTime; j++)
+            for (j = 0; j < process[i].BT; j++)
                 System.out.print("--");
             System.out.print(" ");
         }
