@@ -61,7 +61,7 @@ public class FCFS {
         }
         System.out.print("\n ");
         for (i = 0; i < numProcess; i++) {
-            for (j = 0; j < process[i].BT; j++)
+            for (j = 0; j < (process[i].BT + process[i].BT/2); j++)
                 System.out.print("--");
             System.out.print(" ");
         }
@@ -88,15 +88,10 @@ public class FCFS {
 
     Enter Number of Processes:
     5
-    Enter Arrival time & Burst time for Process P(1):
     2 6
-    Enter Arrival time & Burst time for Process P(2):
     5 3
-    Enter Arrival time & Burst time for Process P(3):
     1 8
-    Enter Arrival time & Burst time for Process P(4):
     0 3
-    Enter Arrival time & Burst time for Process P(5):
     4 4 
 
 
