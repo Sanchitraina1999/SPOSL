@@ -40,6 +40,7 @@ public class FCFS {
         System.out.println("Average Waiting Time = " + avgWT);
         System.out.println("Average TAT = " + avgTAT);
 
+        //GANTT CHART
         int i, j;
         System.out.print(" ");
         for (i = 0; i < numProcess; i++) {
