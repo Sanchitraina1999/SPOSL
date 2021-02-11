@@ -134,16 +134,10 @@ public class SJF {
 }
 
 /*
-	Enter no of processes: 
-	5
-	Enter processes arrival time, burst time: 
+	5 
 	2 6
-	Enter processes arrival time, burst time: 
 	5 2
-	Enter processes arrival time, burst time: 
 	1 8
-	Enter processes arrival time, burst time: 
 	0 3
-	Enter processes arrival time, burst time: 
 	4 4
 */
