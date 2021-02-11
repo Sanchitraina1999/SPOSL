@@ -57,28 +57,28 @@ public class RoundRobin {
 
         }
 
-        //GANTT CHART
+        // GANTT CHART
         int i, j;
         System.out.print(" ");
         for (i = 0; i < numProcess; i++) {
-            for (j = 0; j < obj[i].burstTime; j++)
+            for (j = 0; j < process[i].burstTime; j++)
                 System.out.print("--");
             System.out.print(" ");
         }
         System.out.print("\n|");
 
         for (i = 0; i < numProcess; i++) {
-            for (j = 0; j < process[i].burstTime - 1; j++)
+            for (j = 0; j < process[i].BT - 1; j++)
                 System.out.print(" ");
             int x = i + 1;
             System.out.print("P(" + x + ")");
-            for (j = 0; j < process[i].burstTime - 1; j++)
+            for (j = 0; j < process[i].BT - 1; j++)
                 System.out.print(" ");
             System.out.print("|");
         }
         System.out.print("\n ");
         for (i = 0; i < numProcess; i++) {
-            for (j = 0; j < process[i].burstTime; j++)
+            for (j = 0; j < process[i].BT; j++)
                 System.out.print("--");
             System.out.print(" ");
         }
@@ -86,11 +86,11 @@ public class RoundRobin {
 
         System.out.print("0");
         for (i = 0; i < numProcess; i++) {
-            for (j = 0; j < process[i].burstTime; j++)
+            for (j = 0; j < process[i].BT; j++)
                 System.out.print("  ");
-            if (process[i].turnaroundTime > 9)
+            if (process[i].TAT > 9)
                 System.out.print("\b");
-            System.out.print(process[i].turnaroundTime);
+            System.out.print(process[i].TAT);
 
         }
         System.out.print("\n");
