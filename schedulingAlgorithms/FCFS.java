@@ -69,7 +69,7 @@ public class FCFS {
 
         System.out.print("0");
         for (i = 0; i < numProcess; i++) {
-            for (j = 0; j < 2*process[i].BT; j++)
+            for (j = 0; j < (process[i].BT; j++)
                 System.out.print("  ");
             if (process[i].TAT > 9)
                 System.out.print("\b");
