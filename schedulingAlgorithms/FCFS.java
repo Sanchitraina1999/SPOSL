@@ -71,8 +71,8 @@ public class FCFS {
         for (i = 0; i < numProcess; i++) {
             for (j = 0; j < process[i].BT; j++)
                 System.out.print("  ");
-            if (process[i].TAT > 9)
-                System.out.print("\b");
+            // if (process[i].TAT > 9)
+            //     System.out.print("\b");
             System.out.print(process[i].TAT);
 
         }
@@ -85,7 +85,7 @@ public class FCFS {
 /*
     imsotired@imsotired-Vostro-3578:~/Desktop/TE/SPOSL$  /usr/bin/env /usr/lib/jvm/java-11-openjdk-amd64/bin/java 
     -Dfile.encoding=UTF-8 -cp /home/imsotired/.config/Code/User/workspaceStorage/557c4fc057c4787074b405cb8c60a66e/redhat.java/jdt_ws/SPOSL_ad48c254/bin FCFS 
-    
+
     Enter Number of Processes:
     5
     Enter Arrival time & Burst time for Process P(1):
