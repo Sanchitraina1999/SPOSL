@@ -52,11 +52,11 @@ public class FCFS {
 
         for (i = 0; i < numProcess; i++) {
             for (j = 0; j < process[i].BT; j++)
-                System.out.print(" ");
+                System.out.print("-");
             int x = i + 1;
             System.out.print("P(" + x + ")");
             for (j = 0; j < process[i].BT; j++)
-                System.out.print(" ");
+                System.out.print("-");
             System.out.print("|");
         }
         System.out.print("\n ");
