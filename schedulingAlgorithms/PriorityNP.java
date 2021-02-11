@@ -13,10 +13,11 @@ public class PriorityNP {
 
 		// Accept Input
 		for (int i = 0; i < numProcess; i++) {
-			System.out.println("P(" + (i + 1) + "):Enter  Arrival time, Burst time & priority "); //
+			System.out.println("P(" + (i + 1) + "):Enter  Arrival time, Burst time & priority ");
 			int at = sc.nextInt();
 			int bt = sc.nextInt();
 			int priority = sc.nextInt();
+			System.out.println("P(" + (i + 1) + "):Enter Arrival time");
 		}
 		Arrays.sort(process, new SortByPriority());
 
