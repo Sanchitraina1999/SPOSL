@@ -14,16 +14,13 @@ public class PriorityNP {
 		// Accept Input
 		for (int i = 0; i < numProcess; i++) {
 			System.out.println("P(" + (i + 1) + "):Enter  Burst time  & priority"); //
-			int at = 0;// sc.nextInt();
-			// Note: Arrival time is 0 for all processes;
+			int at = sc.nextInt();
 			int bt = sc.nextInt();
 			int priority = sc.nextInt();
-			// System.out.println("P("+(i+1)+"):Enter Arrival time");
+			System.out.println("P("+(i+1)+"):Enter Arrival time");
 
 			process[i] = new Process("P" + (i + 1), bt, at, priority);
 		}
-		// Sorting processes according to Arrival Time //No need if you take AT=0 or in
-		// ascending order
 		Arrays.sort(process, new SortByPriority());
 
 		int sum = 0;
