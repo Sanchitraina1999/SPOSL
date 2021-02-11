@@ -89,7 +89,7 @@ public class SJF {
 		int i, j;
         System.out.print(" ");
         for (i = 0; i < n; i++) {
-            for (j = 0; j < obj[i].burstTime; j++)
+            for (j = 0; j < (obj[i].burstTime+ obj[i].burstTime/2); j++)
                 System.out.print("--");
             System.out.print(" ");
         }
