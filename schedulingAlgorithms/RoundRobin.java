@@ -60,7 +60,7 @@ public class RoundRobin {
         //GANTT CHART
         int i, j;
         System.out.print(" ");
-        for (i = 0; i < n; i++) {
+        for (i = 0; i < ; i++) {
             for (j = 0; j < obj[i].burstTime; j++)
                 System.out.print("--");
             System.out.print(" ");
