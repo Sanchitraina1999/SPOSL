@@ -85,59 +85,10 @@ public class SJF {
 		}
 	}
 
-	public static void gannt_chart() {
-		int i, j;
-        System.out.print(" ");
-        for (i = 0; i < n; i++) {
-            for (j = 0; j < (obj[i].burstTime+ obj[i].burstTime/2); j++)
-                System.out.print("--");
-            System.out.print(" ");
-        }
-        System.out.print("\n|");
-
-        for (i = 0; i < n; i++) {
-            for (j = 0; j < obj[i].burstTime - 1; j++)
-                System.out.print(" ");
-            int x = i + 1;
-            System.out.print("P(" + x + ")");
-            for (j = 0; j < obj[i].burstTime - 1; j++)
-                System.out.print(" ");
-            System.out.print("|");
-        }
-        System.out.print("\n ");
-        for (i = 0; i < n; i++) {
-            for (j = 0; j < (obj[i].burstTime+ obj[i].burstTime/2); j++)
-                System.out.print("--");
-            System.out.print(" ");
-        }
-        System.out.print("\n");
-
-        System.out.print("0");
-        for (i = 0; i < n; i++) {
-            for (j = 0; j < obj[i].burstTime; j++)
-                System.out.print("  ");
-            if (obj[i].turnaroundTime > 9)
-                System.out.print("\b");
-            System.out.print(obj[i].turnaroundTime);
-
-        }
-        System.out.print("\n");
-	}
-
 	public static void main(String[] Args) {
 		processInput();
 		sjf();
 		display();
-		gannt_chart();
 		sc.close();
 	}
 }
-
-/*
-	5 
-	2 6
-	5 2
-	1 8
-	0 3
-	4 4
-*/
