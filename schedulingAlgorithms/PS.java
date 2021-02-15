@@ -167,4 +167,43 @@ public class PS {
 	}
 }
 
-/*/
+/*
+    imsotired@imsotired-Vostro-3578:~/Desktop/TE/SPOSL$  /usr/bin/env /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Dfile.encoding=UTF-8 -cp /home/imsotired/.config/Code/User/workspaceStorage/557c4fc057c4787074b405cb8c60a66e/redhat.java/jdt_ws/SPOSL_ad48c254/bin PS 
+Sequence of excution: 
+p2
+p4
+p3
+p1
+
+p1 
+burst time: 2 
+arrival time: 0 
+priority: 4 
+Waiting Time for process p1: 6
+
+p2 
+burst time: 2 
+arrival time: 2 
+priority: 1 
+Waiting Time for process p2: 0
+
+p3 
+burst time: 2 
+arrival time: 4 
+priority: 3 
+Waiting Time for process p3: 4
+
+p4 
+burst time: 2 
+arrival time: 6 
+priority: 2 
+Waiting Time for process p4: 2
+
+Turnarround Time for p1: 8
+Turnarround Time for p2: 2
+Turnarround Time for p3: 6
+Turnarround Time for p4: 4
+
+Average Waiting Time: 3
+Average Turnaround Time: 5
+*/
