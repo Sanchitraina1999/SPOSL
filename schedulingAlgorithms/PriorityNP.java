@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class PriorityNP {
-	private Scanner sc;
+	private static Scanner sc;
 
 	public static void main(String[] args) {
 		sc = new Scanner(System.in);
