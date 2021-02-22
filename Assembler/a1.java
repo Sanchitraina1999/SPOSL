@@ -54,7 +54,7 @@ public class a1 {
 		try
 		{
 			//File f=new File("/home/TE/31256/spos-A1/src/demo.asm");
-			File f=new File("/home/ritesh/3rd(2ndSem)/SPOS/31256_A1/src/demo.asm");
+			File f=new File("");
 			Scanner sc=new Scanner(f);
 			int ltorgcounter=0;
 			while(sc.hasNextLine())
