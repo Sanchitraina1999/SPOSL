@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class PriorityNP {
 	private Scanner sc;
 
-	public void execute() {
+	public static void main(String[] args) {
 		sc = new Scanner(System.in);
 
 		System.out.println("Enter Number of Processes:");
