@@ -380,10 +380,10 @@ public class a1 {
 			System.out.println("Pool Table");
 			System.out.println(pool.toString());
 
-			FileWriter fs = new FileWriter("Symbol.txt");
-			FileWriter fl = new FileWriter("Literal.txt"); // src/
-			FileWriter fp = new FileWriter("Pool.txt");
-			FileWriter fic = new FileWriter("IC.txt");
+			FileWriter fs = new FileWriter("Assembler/Symbol.txt");
+			FileWriter fl = new FileWriter("Assembler/Literal.txt");
+			FileWriter fp = new FileWriter("Assembler/Pool.txt");
+			FileWriter fic = new FileWriter("Assembler/IC.txt");
 			fic.write(IC);
 			for (String s : symbol.keySet())
 				fs.write(s + "\t" + symbol.get(s) + "\n");
