@@ -53,7 +53,6 @@ public class a1 {
 		int addr[] = new int[30];
 		int f1 = 1, z = 0, icc = 0;
 		try {
-			// File f=new File("/home/TE/31256/spos-A1/src/demo.asm");
 			File f = new File("/home/imsotired/Desktop/TE/SPOSL/Assembler/demo.asm");
 			Scanner sc = new Scanner(f);
 			int ltorgcounter = 0;
