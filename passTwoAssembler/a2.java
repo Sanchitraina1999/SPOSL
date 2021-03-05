@@ -3,8 +3,7 @@ import java.io.*;
 public class a2 {
 	public static void main(String[] args) {
 		try{
-			//File f=new File("/home/TE/31256/spos-A1/src/demo.asm");
-			File fic=new File("/home/ritesh/3rd(2ndSem)/SPOS/31256_A2/IC.txt");
+			File fic=new File("/home/imsotired/Desktop/TE/SPOSL/passTwoAssembler/IC.txt");
 			Scanner sc=new Scanner(fic);
 			while(sc.hasNextLine())
 			{
@@ -173,6 +172,9 @@ public class a2 {
 		catch(Exception e)
 		{
 			e.printStackTrace();
+		}
+		finally{
+			sc.close();
 		}
 
 	}
