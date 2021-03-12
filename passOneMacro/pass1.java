@@ -10,7 +10,7 @@ public class pass1 {
 		{
 			int flag=0,m=0;
 			//File f=new File("/home/TE/31256/A3/src/input.asm");
-			File f=new File("/home/ritesh/3rd(2ndSem)/SPOS/31256_A3/src/input.asm");	
+			File f=new File("/home/imsotired/Desktop/TE/SPOSL/passTwoAssembler/inpu");	
 			Scanner sc=new Scanner(f);
 			String mnt[][]=new String[5][5];
 			Vector mdt=new Vector();
