@@ -1,0 +1,13 @@
+1	MOVER (P,3) ,(P,1)
+2	ADD (P,3) ,(P,2)
+3	MOVEM (P,3) ,(P,1)
+4	MEND 
+5	READ (P,1)
+6	SUB (P,3) ,(P,1)
+7	A1 1O  ,(P,1) &R=DREG 
+8	PRINT (P,2)
+9	MEND 
+10	READ (P,1)
+11	SUB (P,3) ,(P,1)
+12	PRINT (P,2)
+13	MEND 

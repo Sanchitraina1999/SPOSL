@@ -1,0 +1,19 @@
+MACRO
+A1	&X,	&Y,	&R=AREG
+MOVER	&R,	&X
+ADD	&R,	&Y
+MOVEM	&R,	&X
+MEND
+MACRO
+B1	&M,	&N=,	&P=
+READ	&M
+SUB	&P,	&M
+A1	1O,	&M,	&R=DREG
+PRINT	&N
+MEND
+MACRO
+C1	&I,	&J=,	&K=BREG
+READ	&I
+SUB	&K,	&I
+PRINT	&J
+MEND
