@@ -5,7 +5,7 @@ ADD	&R,	&Y
 MOVEM	&R,	&X
 MEND
 MACRO
-B1	&M,	&N=,	&P=
+B1	 &M,	&N=,	&P=
 READ	&M
 SUB	&P,	&M
 A1	1O,	&M,	&R=DREG
