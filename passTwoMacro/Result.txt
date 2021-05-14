@@ -1,0 +1,14 @@
+START	100	
++MOVER 	AREG 	 	10  	
++ADD 	AREG 	 	20  	
++MOVEM 	AREG 	 	10  	
++READ 	30  	
++SUB 	CREG 	 	30  	
++MOVER DREG	 10 	
++ADD DREG	 	30  	
++MOVEM DREG	 	30
++PRINT 	40  	
++READ 	60  	
++SUB 	BREG 	 	60  	
++PRINT 	70  	
+END	

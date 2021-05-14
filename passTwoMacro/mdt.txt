@@ -1,0 +1,15 @@
+1	MOVER	(P,3)	(P,1) 
+2	ADD	(P,3)	(P,2) 
+3	MOVEM	(P,3)	(P,1) 
+4	MEND 
+5	READ	(P,1) 
+6	SUB	(P,3)	(P,1) 
+7	MOVER	DREG	10 
+8	ADD	DREG	(P,1) 
+9	MOVEM	DREG	(P,1)
+10	PRINT	(P,2) 
+11	MEND 
+12	READ	(P,1) 
+13	SUB	(P,3)	(P,1) 
+14	PRINT	(P,2) 
+15	MEND 

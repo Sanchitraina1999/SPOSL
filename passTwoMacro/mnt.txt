@@ -1,0 +1,4 @@
+Name	#PP	#KP	MDTP	KPDP
+A1	2	1	1	1	
+B1	1	2	5	2	
+C1	1	2	12	4	
