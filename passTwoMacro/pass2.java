@@ -39,6 +39,12 @@ public class pass2 {
 			 // File f=new File("/home/TE/31256/A4/src/input.asm");
 			 // File f2=new File("/home/TE/31256/A4/src/kp.txt");
 			 // File f3=new File("/home/TE/31256/A4/src/mdt.txt");
+
+			File f=new File("/home/imsotired/Desktop/TE/SPOSL/passTwoMacro
+			/home/TE/31256/A4/src/input.asm");
+			// File f2=new File("/home/TE/31256/A4/src/kp.txt");
+			// File f3=new File("/home/TE/31256/A4/src/mdt.txt");
+
 			File f=new File("/home/ritesh/3rd(2ndSem)/SPOS/31256_A4/src/input.asm");
 			File f2=new File("/home/ritesh/3rd(2ndSem)/SPOS/31256_A4/src/kp.txt");
 			File f3=new File("/home/ritesh/3rd(2ndSem)/SPOS/31256_A4/src/mdt.txt");
