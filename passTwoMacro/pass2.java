@@ -6,7 +6,8 @@ public class pass2 {
 	public static String[] checkifmacro(String a){
 		String result[]=new String[20];
 		//File f1=new File("/home/TE/31256/A4/src/mnt.txt");
-		File f1=new File("/home/ritesh/3rd(2ndSem)/SPOS/31256_A4/src/mnt.txt");
+		File f1=new File("/");
+		File("/home/ritesh/3rd(2ndSem)/SPOS/31256_A4/src/mnt.txt");
 		try
 		{
 			Scanner sc1=new Scanner(f1);
