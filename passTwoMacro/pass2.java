@@ -5,9 +5,7 @@ public class pass2 {
 
 	public static String[] checkifmacro(String a){
 		String result[]=new String[20];
-		//File f1=new File("/home/TE/31256/A4/src/mnt.txt");
-		File f1=new File("/home/imsotired/Desktop/TE/SPOSL/passTwoMacro");
-		File("/home/ritesh/3rd(2ndSem)/SPOS/31256_A4/src/mnt.txt");
+		File f1=new File("/home/imsotired/Desktop/TE/SPOSL/passTwoMacro/mnt.txt");
 		try
 		{
 			Scanner sc1=new Scanner(f1);
@@ -34,7 +32,6 @@ public class pass2 {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Vector aptab=new Vector();
 		Vector checkvector=new Vector();
 		try
